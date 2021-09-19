@@ -12,7 +12,7 @@ class FileUpload extends Controller
 
   public function index() {
     $fileName = DB::select('select * from files');
-    return view('pages.tables',['file'=>$fileName]);
+    return view('welcome',['file'=>$fileName]);
  }
 
   public function fileUpload(Request $req){

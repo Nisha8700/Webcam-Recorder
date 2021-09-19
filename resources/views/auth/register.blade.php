@@ -19,7 +19,7 @@
                     <i class="tim-icons icon-triangle-right-17"></i>
                 </div>
                 <div class="description">
-                    <h3 class="info-title">{{ __('Web ') }}</h3>
+                    <h3 class="info-title">{{ __('Fully Coded in HTML5') }}</h3>
                     <p class="description">
                         {{ __('We\'ve developed the website with HTML5 and CSS3. The client has access to the code using GitHub.') }}
                     </p>
@@ -30,7 +30,7 @@
                     <i class="tim-icons icon-trophy"></i>
                 </div>
                 <div class="description">
-                    <h3 class="info-title">{{ __('Mobile') }}</h3>
+                    <h3 class="info-title">{{ __('Built Audience') }}</h3>
                     <p class="description">
                         {{ __('There is also a Fully Customizable CMS Admin Dashboard for this product.') }}
                     </p>

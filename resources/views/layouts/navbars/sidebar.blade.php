@@ -1,8 +1,8 @@
 <div class="sidebar">
     <div class="sidebar-wrapper">
         <div class="logo">
-            <a href="#" class="simple-text logo-mini">VT</a>
-            <a href="#" class="simple-text logo-normal">Vocso Technologies</a>
+            <a href="#" class="simple-text logo-mini">{{ __('BD') }}</a>
+            <a href="#" class="simple-text logo-normal">{{ __('Black Dashboard') }}</a>
         </div>
         <ul class="nav">
             <li @if ($pageSlug == 'dashboard') class="active " @endif>
@@ -14,7 +14,7 @@
             <li>
                 <a data-toggle="collapse" href="#laravel-examples" aria-expanded="true">
                     <i class="fab fa-laravel" ></i>
-                    <span class="nav-link-text" >{{ __('Users') }}</span>
+                    <span class="nav-link-text" >{{ __('Users Management') }}</span>
                     <b class="caret mt-1"></b>
                 </a>
 
@@ -26,22 +26,22 @@
                                 <p>{{ __('User Profile') }}</p>
                             </a>
                         </li>
-                        <li @if ($pageSlug == 'users') class="active " @endif>
+                        {{-- <li @if ($pageSlug == 'users') class="active " @endif>
                             <a href="{{ route('user.index')  }}">
                                 <i class="tim-icons icon-bullet-list-67"></i>
                                 <p>{{ __('User Management') }}</p>
                             </a>
-                        </li>
+                        </li> --}}
                     </ul>
                 </div>
             </li>
-            {{-- <li @if ($pageSlug == 'icons') class="active " @endif>
-                <a href="{{ route('pages.icons') }}">
+            <li @if ($pageSlug == 'icons') class="active " @endif>
+                <a href="{{ route('videos.index') }}">
                     <i class="tim-icons icon-atom"></i>
-                    <p>{{ __('Icons') }}</p>
+                    <p>{{ __('Webcam Recorder') }}</p>
                 </a>
             </li>
-            <li @if ($pageSlug == 'maps') class="active " @endif>
+            {{-- <li @if ($pageSlug == 'maps') class="active " @endif>
                 <a href="{{ route('pages.maps') }}">
                     <i class="tim-icons icon-pin"></i>
                     <p>{{ __('Maps') }}</p>
@@ -52,20 +52,14 @@
                     <i class="tim-icons icon-bell-55"></i>
                     <p>{{ __('Notifications') }}</p>
                 </a>
-            </li> --}}
+            </li>
             <li @if ($pageSlug == 'tables') class="active " @endif>
                 <a href="{{ route('pages.tables') }}">
                     <i class="tim-icons icon-puzzle-10"></i>
-                    <p>{{ __('Add Video') }}</p>
+                    <p>{{ __('Table List') }}</p>
                 </a>
             </li>
-            {{-- <li>
-                <a href="{{ route('file') }}">
-                    <i class="tim-icons icon-puzzle-10"></i>
-                    File upload
-                </a>
-            </li> --}}
-            {{-- <li @if ($pageSlug == 'typography') class="active " @endif>
+            <li @if ($pageSlug == 'typography') class="active " @endif>
                 <a href="{{ route('pages.typography') }}">
                     <i class="tim-icons icon-align-center"></i>
                     <p>{{ __('Typography') }}</p>

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FileUpload;
+use App\Http\Controllers\MediaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,11 +18,17 @@ use App\Http\Controllers\FileUpload;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/file', [FileUpload::class, 'createForm']);
 
-Route::post('/file', [FileUpload::class, 'FileUpload'])->name('fileUpload');
-Route::get('/file',[FileUpload::class, 'index'])->name('file');
+Route::resource('videos', MediaController::class);
+Route::get('delete/{id}', [MediaController::class, 'destroy']);
+Route::get('search/', [MediaController::class, 'search'])->name('search');
 
+
+
+Route::get('/upload-file', [FileUpload::class, 'createForm']);
+
+Route::post('/upload-file', [FileUpload::class, 'FileUpload'])->name('fileUpload');
+Route::get('/',[FileUpload::class, 'index']);
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -34,8 +41,7 @@ Route::group(['middleware' => 'auth'], function () {
 		Route::get('maps', ['as' => 'pages.maps', 'uses' => 'App\Http\Controllers\PageController@maps']);
 		Route::get('notifications', ['as' => 'pages.notifications', 'uses' => 'App\Http\Controllers\PageController@notifications']);
 		Route::get('rtl', ['as' => 'pages.rtl', 'uses' => 'App\Http\Controllers\PageController@rtl']);
-		Route::get('tables', ['as' => 'pages.tables', 'uses' => 'App\Http\Controllers\FileUpload@index']);
-		// Route::delete('delete/{id}', ['as' => 'pages.tables', 'uses' => 'App\Http\Controllers\FileUpload@destroy']);
+		Route::get('tables', ['as' => 'pages.tables', 'uses' => 'App\Http\Controllers\PageController@tables']);
 		Route::get('typography', ['as' => 'pages.typography', 'uses' => 'App\Http\Controllers\PageController@typography']);
 		Route::get('upgrade', ['as' => 'pages.upgrade', 'uses' => 'App\Http\Controllers\PageController@upgrade']);
 });

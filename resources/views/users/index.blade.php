@@ -60,8 +60,8 @@
                         <div class="sidebar">
                                 <div class="sidebar-wrapper">
                                     <div class="logo">
-
-                                        <a href="#" class="simple-text logo-normal">{{ _('Vocso Technologies') }}</a>
+                                        <a href="#" class="simple-text logo-mini">{{ _('BD') }}</a>
+                                        <a href="#" class="simple-text logo-normal">{{ _('Black Dashboard') }}</a>
                                     </div>
                                     <ul class="nav">
                                         <li>
@@ -73,10 +73,10 @@
                                         <li>
                                             <a data-toggle="collapse" href="#laravel-examples" aria-expanded="true">
                                                 <i class="fab fa-laravel" ></i>
-                                                <span class="nav-link-text" >{{ __('Users') }}</span>
+                                                <span class="nav-link-text" >{{ __('Laravel Examples') }}</span>
                                                 <b class="caret mt-1"></b>
                                             </a>
-
+                            
                                             <div class="collapse show" id="laravel-examples">
                                                 <ul class="nav pl-4">
                                                     <li >
@@ -94,7 +94,7 @@
                                                 </ul>
                                             </div>
                                         </li>
-                                        {{-- <li >
+                                        <li >
                                             <a href="{{ route('pages.icons') }}">
                                                 <i class="tim-icons icon-atom"></i>
                                                 <p>{{ _('Icons') }}</p>
@@ -111,14 +111,14 @@
                                                 <i class="tim-icons icon-bell-55"></i>
                                                 <p>{{ _('Notifications') }}</p>
                                             </a>
-                                        </li> --}}
+                                        </li>
                                         <li >
                                             <a href="{{ route('pages.tables') }}">
                                                 <i class="tim-icons icon-puzzle-10"></i>
                                                 <p>{{ _('Table List') }}</p>
                                             </a>
                                         </li>
-                                        {{-- <li >
+                                        <li >
                                             <a href="{{ route('pages.typography') }}">
                                                 <i class="tim-icons icon-align-center"></i>
                                                 <p>{{ _('Typography') }}</p>
@@ -135,11 +135,11 @@
                                                 <i class="tim-icons icon-spaceship"></i>
                                                 <p>{{ _('Upgrade to PRO') }}</p>
                                             </a>
-                                        </li> --}}
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
-
+                            
             <div class="main-panel">
                     <nav class="navbar navbar-expand-lg navbar-absolute navbar-transparent">
                             <div class="container-fluid">
@@ -227,7 +227,7 @@
                                 </div>
                             </div>
                         </div>
-
+                        
 <div class="modal modal-search fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModal" aria-hidden="true">
 <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -257,7 +257,7 @@
                 </div>
             </div>
             <div class="card-body">
-
+                
                 <div class="">
                     <table class="table tablesorter " id="">
                         <thead class=" text-primary">
@@ -290,7 +290,7 @@
             </div>
             <div class="card-footer py-4">
                 <nav class="d-flex justify-content-end" aria-label="...">
-
+                    
                 </nav>
             </div>
         </div>

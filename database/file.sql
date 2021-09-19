@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 13, 2021 at 06:53 PM
+-- Generation Time: Sep 19, 2021 at 02:34 PM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 7.3.28
 
@@ -71,6 +71,38 @@ INSERT INTO `files` (`id`, `created_at`, `updated_at`, `name`, `title`, `duratio
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `media`
+--
+
+CREATE TABLE `media` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `file_name` varchar(500) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `video_name` varchar(250) COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `media`
+--
+
+INSERT INTO `media` (`id`, `created_at`, `updated_at`, `file_name`, `video_name`) VALUES
+(1, '2021-09-18 23:53:08', '2021-09-18 23:53:08', NULL, '0'),
+(2, '2021-09-18 23:53:09', '2021-09-18 23:53:09', NULL, '0'),
+(3, '2021-09-18 23:53:09', '2021-09-18 23:53:09', NULL, '0'),
+(4, '2021-09-18 23:53:09', '2021-09-18 23:53:09', NULL, '0'),
+(6, '2021-09-18 23:53:10', '2021-09-18 23:53:10', NULL, '0'),
+(27, '2021-09-19 05:00:58', '2021-09-19 05:00:58', 'blob_1632047458.webm', NULL),
+(28, '2021-09-19 05:02:21', '2021-09-19 05:02:21', 'blob_1632047541.webm', NULL),
+(29, '2021-09-19 05:03:28', '2021-09-19 05:03:28', 'blob_1632047608.webm', 'dsfsdfdsfsd'),
+(30, '2021-09-19 05:06:23', '2021-09-19 05:06:23', 'blob_1632047783.webm', NULL),
+(31, '2021-09-19 05:20:43', '2021-09-19 05:20:43', 'blob_1632048643.webm', NULL),
+(32, '2021-09-19 06:04:17', '2021-09-19 06:04:17', 'blob_1632051257.webm', NULL),
+(33, '2021-09-19 06:42:47', '2021-09-19 06:42:47', 'blob_1632053567.webm', NULL);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `migrations`
 --
 
@@ -89,7 +121,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (7, '2014_10_12_100000_create_password_resets_table', 1),
 (8, '2019_08_19_000000_create_failed_jobs_table', 1),
 (9, '2019_12_14_000001_create_personal_access_tokens_table', 1),
-(10, '2021_09_12_063702_create_files_table', 1);
+(10, '2021_09_12_063702_create_files_table', 1),
+(11, '2021_09_19_043003_create_media_table', 2);
 
 -- --------------------------------------------------------
 
@@ -165,6 +198,12 @@ ALTER TABLE `files`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `media`
+--
+ALTER TABLE `media`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `migrations`
 --
 ALTER TABLE `migrations`
@@ -208,10 +247,16 @@ ALTER TABLE `files`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
+-- AUTO_INCREMENT for table `media`
+--
+ALTER TABLE `media`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+
+--
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
